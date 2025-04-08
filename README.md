@@ -98,4 +98,4 @@ We can implement a more naive version of the Greedy algorithm with a double for 
 
 ## 👥 Authors
 
-Developed by Ralph NADER & Maxime Hebert — ENSAE 1A Programming Course.
+Developed by Ralph NADER & Maxime HEBERT — ENSAE 1A Programming Course.
