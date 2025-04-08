@@ -1,18 +1,24 @@
-# 🧩 Grid Game Project – ENSAE 1A Python Assignment
+# 🧩 Grid Game Project
 
-This repository contains a Python-based, object-oriented grid game developed as part of an ENSAE 1A programming assignment. The project explores fundamental programming concepts through a playable game that runs in the terminal and features autonomous players, game state management, and user interaction.
+This repository contains a Python-based, object-oriented grid game developed as part of an ENSAE 1A programming assignment. The project explores fundamental programming concepts through a playable game that features several game modes and different ways of solving the grid.
 
 ---
 
 ## 🎮 Game Overview
 
-The game is played on a **grid of configurable size**, where several **players** (real or virtual) move across the cells according to specific rules. Players may encounter objects or events on the grid, and the goal of the game varies depending on the game mode chosen.
+  In this project, we tackle an optimization problem on a grid, where the objective is to find the optimal pairing of cells — that is, the pairing that minimizes the total score.
+The game takes place on a grid of size n × m, with n ≥ 1 and m ≥ 2.
+Each cell on the grid has two attributes: a color and a value.
+  In a second phase, we modify the rules of the game (how to appair the cells) and adapt the algorithms within the new rules. 
+
+Regarding the game modes, artificial players are designed so as to strategically match cells based on these attributes to achieve the lowest possible score.
 
 **Key Features:**
-- Customizable grid size and number of players.
 - Turn-based movement system.
-- Object-oriented design with modular architecture.
-- Expandable rules and game logic (e.g., obstacles, scoring systems, etc.).
+- Expandable rules and game logic (e.g., scoring systems, pairing rules, ...).
+- 3 game modes : PVE, PVP and IA vs IA.
+- Several solving algorithms.
+- Pygame interface.
 
 ---
 
@@ -58,29 +64,29 @@ project_root/
 To run the game:
 
 ```bash
-python main.py
+python pygames.py
 ```
 
-You can customize parameters such as grid size, number of players, and turn limit by editing `config.py`.
+You can customize parameters such as grid size, pairing rules, and display settings.
 
 ---
 
 ## 🧠 Educational Objectives
 
-This project was designed to:
-- Practice object-oriented programming in Python.
-- Learn to structure a modular project with multiple files and responsibilities.
-- Develop algorithmic thinking through game mechanics.
+This project was designed to work on diferent kind of algorithms:
+- Greedy algorithm
+- Ford-Fulkerson (Maximum flow algorithm)
+- Maximum Weight Matching (Matching algorithm in a graph)
+- Minimax (Game theory algorithm : zero-sum game)
 
 ---
 
-## 📌 Notes
+## 📌 Important Note
 
-- This is a command-line game — no GUI is included.
-- The project is structured to be easily expandable (e.g., adding items, AI logic, different win conditions).
+We can implement a more naive version of the Greedy algorithm with a double for loop!
 
 ---
 
 ## 👥 Authors
 
-Developed by [Your Name], [Your Teammates' Names] — ENSAE 1A Programming Course.
+Developed by Ralph NADER & Maxime Hebert — ENSAE 1A Programming Course.
