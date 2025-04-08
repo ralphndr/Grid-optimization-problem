@@ -44,15 +44,16 @@ Regarding the game modes, artificial players are designed so as to strategically
 ```
 project_root/
 │
-├── game/                   # Main game logic
+├── src/                    # Python code
+│   ├── main.py             # Entry point to launch the algorithms 
 │   ├── grid.py             # Grid management (creation, display, updates)
-│   ├── player.py           # Player class and movement logic
-│   ├── game.py             # Game controller and main loop
+│   ├── solver.py           # Implements all solvers (including the ones for new rules/game modes)
+│   └── pygames.py          # Game interface (3 modes)
 │
-├── utils/                  # Helper functions and modules
-│   └── config.py           # Game parameters and constants
+├── report/                 # Documents
+│   ├── Resultat final.pdf  # Results
+│   └── project_assignment.pdf
 │
-├── main.py                 # Entry point to launch the game
 ├── requirements.txt        # Python dependencies (if any)
 └── README.md               # Project overview (you're reading it!)
 ```
