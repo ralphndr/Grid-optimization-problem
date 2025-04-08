@@ -25,17 +25,22 @@ Regarding the game modes, artificial players are designed so as to strategically
 ## ⚙️ How It Works
 
 ### Game Loop
-1. The game starts with a grid and a set of players.
-2. Each player takes turns making a move based on the game rules.
-3. The game continues until an end condition is met (e.g., maximum rounds, victory condition, etc.).
+The colors of the cells are coded as follows: { 0: white ('w'), 1: red ('r'), 2: blue ('b'), 3: green ('g'), 4: black ('d') }
+
+The rules for forming cell pairs are defined as follows: A cell can only be part of one pair at a time and can only be paired with an adjacent cell. Additionally, the pairing follows a color-based rule: 
+    - Green cells (3) can only pair with white (0) or other green cells.
+    - Blue cells (2) and red cells (1) can pair with each other or with a white cell (0).
+    - White cells can pair with any color except black.
+
+Once the pairs are formed according to the pairing rules, the score is calculated as follows: for each pair, take the absolute difference between the values of the two cells and add it to the score. The values of unpaired cells (except for black cells) are added to this score.
 
 ### Players
 - Players can be controlled by the user or act autonomously.
-- Each player has a position and possibly a strategy.
+- Each player tries to minimize its score (sum of the values of the chosen pairs -> for each pair: value = the difference between the values of the two cells in the pair).
 
 ### Grid
-- The grid is a 2D structure that holds player positions and other objects (if any).
-- It handles boundaries, player interactions, and visual representation.
+- The grid is a 2D structure that represents the cells and their values
+- Cells are colored in light grey once they are used!
 
 ---
 
@@ -44,17 +49,20 @@ Regarding the game modes, artificial players are designed so as to strategically
 ```
 project_root/
 │
-├── src/                    # Python code
+├── src/code/               # Python code
 │   ├── main.py             # Entry point to launch the algorithms 
 │   ├── grid.py             # Grid management (creation, display, updates)
 │   ├── solver.py           # Implements all solvers (including the ones for new rules/game modes)
 │   └── pygames.py          # Game interface (3 modes)
 │
+├── src/ input/             # Include different grids to work on
+├── src/ tests/             # Tests to verify the code is working properly
+│
 ├── report/                 # Documents
-│   ├── Resultat final.pdf  # Results
+│   ├── Resultat final.pdf  # Results (with screenshots,time comparisons, ...) 
 │   └── project_assignment.pdf
 │
-├── requirements.txt        # Python dependencies (if any)
+├── LICENSE
 └── README.md               # Project overview (you're reading it!)
 ```
 
