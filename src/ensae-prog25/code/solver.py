@@ -115,22 +115,27 @@ class SolverEmpty(Solver):
 
 class SolverGreedy(Solver):
     """
-    question 4 : 
-    soit n et m la dimmension de la grille.
-    notons dans une premier tant que la complexité de valide_pairs est en O(n*m)
+    Sure! Here's a polished version you can directly include in a `README.md` file:
 
-    Calculons maintenant la complexité du solver greedy. 
-    Dans le pire cas , 
-    le calcul du tableau c se fait en O( (n*m) )
-    et le calcul du minimum en O( (n*m) )
-    donc la compléxité de cette fonction est O( (n*m)^2 )
+---
 
-    Le score de la solution n'est pas optimal; En effet pour la grile 00 on trouve un score de 14.
-    Or il est possible d'atteindre 12 en prennant les paires suivantes : 
-    ((0,0),(1,0)) ((0,1),(0,2)) ((1,1),(1,2))
+### Question 4 – Complexity Analysis
 
-    Il est possible de trouver la solution optimal en testant toutes les combinaisons possible et en calculant le 
-    score de chacunes d'entre elles ( 2^(n*m/2) combinaisons possible). Cela se fait en O( n*m * 2^(n*m/2))
+Let n and m be the dimensions of the grid.
+
+- The complexity of the 'valid_pairs' function is O(n*m)
+
+Now, let’s analyze the complexity of the greedy solver:
+    - Computing the array c takes O(n*m)
+    - Finding the minimum also takes O(n*m),
+    - Therefore, the overall complexity of the greedy solver is O((n*m)^2).
+
+Note: The solution returned by the greedy algorithm isn't always optimal.
+For instance, for the grid `00`, the greedy algorithm returns a score of 14, whereas an optimal solution can achieve a score of 12 by selecting the following pairs:
+ (0, 0), (1, 0), (0, 1), (0, 2), ((1, 1), (1, 2)
+
+To find the optimal solution, one can test all possible pair combinations and evaluate their corresponding scores.  
+There are 2^(n*m/2) possible combinations, resulting in a complexity of O(n*m*2^(n*m/2))
 
     """
 
@@ -291,19 +296,31 @@ class Graph:
 
 class Solver_Ford(Solver):
     """
-    Question 6:
+    Got it! Here's a clean, GitHub-README-ready version of your **Question 6**, written in Markdown:
 
-    Ce solver trouve la solution optimale pour les grilles ne possédant que des 1 comme valeurs.
-    On compare les deux modeles dans main.py
+---
 
-    Complexité:
-    Notons V le nombre de sommets et E le nombre d'arêtes.
-    searching_algo_BFS se fait en O(E + V) soit en O(n*n).
-    build_adjacency_matrix se fait en O(n * m).
+### Question 6 – Optimal Solver for Grids with Only 1s
 
-    Ford-Fulkerson peut nécessiter au plus O(V) augmentations de flot, donc O(n * m) dans notre cas.
-    Chaque itération de boucle est en O(n * m).
-    Donc, ford_fulkerson se fait en O(V * n * m) soit O((n * m)^2).
+This solver computes the **optimal solution** for grids where all values are equal to `1`.
+
+A comparison between the greedy and optimal solvers is provided in [`main.py`](./main.py).
+
+---
+
+### Complexity Analysis
+
+Let V (number of vertices) and E (number of edges).
+
+We analyze the complexity of each step:
+    - `searching_algo_BFS` runs in O(E + V), which is O(n²) in our case  
+    - `build_adjacency_matrix` runs in O(n × m)
+
+The Ford-Fulkerson algorithm:
+    - Requires at most O(V) = O(n × m) flow augmentations
+    - Each iteration (BFS + update) takes O(n × m)
+    - Therefore, the overall complexity is:  
+  O(V × n × m) = O((n × m)²)
     """
     
     def build_adjacency_matrix(self, grid):

@@ -35,10 +35,9 @@ start_time = time.time()
 teste_ford(gride)
 end_time = time.time()  
 temps = end_time - start_time
-print(f"Temps pour le Ford Fulkerson: {temps:.2f} secondes")
+print(f"Temps pour le Ford-Fulkerson: {temps:.2f} secondes")
 
 
- 
 start_time = time.time()  
 teste_mwm(gride)
 end_time = time.time()  
