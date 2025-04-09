@@ -1,6 +1,6 @@
 # 🧩 Grid Game Project
 
-This repository contains a Python-based, object-oriented grid game developed as part of an ENSAE 1A programming assignment. The project explores fundamental programming concepts through a playable game that features several game modes and different ways of solving the grid.
+This repository contains a Python-based, object-oriented grid game developed as part of a programming assignment. The project explores fundamental programming concepts through a playable game that features several game modes and different ways of solving the grid.
 
 ---
 
