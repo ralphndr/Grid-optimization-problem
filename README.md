@@ -82,7 +82,7 @@ You can customize parameters such as grid size, pairing rules, and display setti
 
 ## 🧠 Educational Objectives
 
-This project was designed to work on diferent kind of algorithms:
+This project was designed to work on different kind of algorithms:
 - Greedy algorithm
 - Ford-Fulkerson (Maximum flow algorithm)
 - Maximum Weight Matching (Matching algorithm in a graph)
