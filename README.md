@@ -1,10 +1,10 @@
-# 🧩 Grid Game Project
+# 🧩 Grid game project
 
 This repository contains a Python-based, object-oriented grid game developed as part of a programming assignment. The project explores fundamental programming concepts through a playable game that features several game modes and different ways of solving the grid.
 
 ---
 
-## 🎮 Game Overview
+## 🎮 Game overview
 
   In this project, we tackle an optimization problem on a grid, where the objective is to find the optimal pairing of cells — that is, the pairing that minimizes the total score.
 The game takes place on a grid of size n × m, with n ≥ 1 and m ≥ 2.
@@ -13,7 +13,7 @@ Each cell on the grid has two attributes: a color and a value.
 
 Regarding the game modes, artificial players are designed so as to strategically match cells based on these attributes to achieve the lowest possible score.
 
-**Key Features:**
+**Key features:**
 - Turn-based movement system.
 - Expandable rules and game logic (e.g., scoring systems, pairing rules, ...).
 - 3 game modes : PVE, PVP and IA vs IA.
@@ -22,9 +22,9 @@ Regarding the game modes, artificial players are designed so as to strategically
 
 ---
 
-## ⚙️ How It Works
+## ⚙️ How it works
 
-### Game Loop
+### Game loop
 The colors of the cells are coded as follows: { 0: white ('w'), 1: red ('r'), 2: blue ('b'), 3: green ('g'), 4: black ('d') }
 
 The rules for forming cell pairs are defined as follows: A cell can only be part of one pair at a time and can only be paired with an adjacent cell. Additionally, the pairing follows a color-based rule: 
@@ -44,7 +44,7 @@ Once the pairs are formed according to the pairing rules, the score is calculate
 
 ---
 
-## 📁 Repository Structure
+## 📁 Repository structure
 
 ```
 project_root/
@@ -68,7 +68,7 @@ project_root/
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting started
 
 To run the game:
 
@@ -80,7 +80,7 @@ You can customize parameters such as grid size, pairing rules, and display setti
 
 ---
 
-## 🧠 Educational Objectives
+## 🧠 Educational objectives
 
 This project was designed to work on different kinds of algorithms:
 - Greedy algorithm
@@ -90,7 +90,7 @@ This project was designed to work on different kinds of algorithms:
 
 ---
 
-## 📌 Important Note
+## 📌 Important note
 
 We can implement a more naive version of the Greedy algorithm with a double for loop!
 
