@@ -14,10 +14,9 @@ BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 LIGHT_GREY = (211, 211, 211)
 
-
 pygame.init()
 os.environ['SDL_VIDEO_CENTERED'] = '1'
-grid = Grid.grid_from_file('input/grid17.in', read_values=True)
+grid = Grid.grid_from_file('ensae-prog25/input/grid17.in', read_values=True)
 
 
 rows, cols = grid.n, grid.m
